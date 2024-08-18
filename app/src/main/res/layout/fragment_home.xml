@@ -6,8 +6,6 @@
     tools:context=".feature.fragments.HomeFragment"
     android:background="@color/white_blue">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,12 +14,13 @@
         android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/title_home_fragment"
             android:textSize="40sp"
             android:layout_marginBottom="60dp"
             android:textStyle="bold"
+            android:textAlignment="center"
             />
 
         <Button

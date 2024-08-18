@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.optimizacion_apps.R
 import com.example.optimizacion_apps.databinding.FragmentHomeBinding
 
@@ -18,6 +19,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+
+        initEvents()
+
         return binding.root
+    }
+
+    private fun initEvents(){
+        binding.btnInicio.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_analisisFragment)
+        }
     }
 }

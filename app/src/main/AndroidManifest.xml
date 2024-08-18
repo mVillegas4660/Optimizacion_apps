@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Optimizacion_apps"
         tools:targetApi="34">
         <activity
+            android:name=".feature.ui.adapter.AdpItemApplication"
+            android:exported="false" />
+        <activity
             android:name=".feature.ui.MainActivity"
             android:exported="true">
             <intent-filter>
