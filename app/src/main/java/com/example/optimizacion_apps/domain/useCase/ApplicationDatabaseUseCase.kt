@@ -11,9 +11,10 @@ class ApplicationDatabaseUseCase @Inject constructor(
         return repository.listApplicationsActividadFromDatabase()
     }
 
-    suspend fun add( body : ApplicationEntity) {
+    suspend fun add( body : ApplicationEntity): Long {
         return repository.insertApplicationActividadFromDatabase(body)
     }
+
     suspend fun count(): Int {
         return repository.countApplicationsActividadFromDatabase()
     }

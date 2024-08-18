@@ -85,6 +85,7 @@
                     android:maxLength="30"
                     android:ems="10"
                     android:textAllCaps="true"
+                    android:inputType="text"
                     />
 
             </LinearLayout>

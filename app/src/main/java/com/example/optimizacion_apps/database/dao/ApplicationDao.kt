@@ -12,7 +12,7 @@ interface ApplicationDao {
     suspend fun getAll(): List<ApplicationEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(entity: ApplicationEntity)
+    suspend fun insert(entity: ApplicationEntity): Long
 
     @Query("select count(*) from TB_APPLICATION")
     suspend fun countAll(): Int

@@ -14,8 +14,8 @@ class ApplicationRepository @Inject constructor(
 
     suspend fun insertApplicationActividadFromDatabase (
         body: ApplicationEntity
-    ) {
-        applicationDao.insert(body)
+    ): Long {
+        return applicationDao.insert(body)
     }
 
     suspend fun countApplicationsActividadFromDatabase  (

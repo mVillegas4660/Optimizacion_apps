@@ -87,6 +87,9 @@ dependencies {
     //Corrutinas
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
+    //Toasty
+    implementation("com.github.GrenderG:Toasty:1.5.2")
+
     //ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     //Livedata
