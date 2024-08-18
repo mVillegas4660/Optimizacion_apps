@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Optimizacion_apps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_home_fragment">App de Optimización</string>
+    <string name="txt_btn_inicio">Inicio</string>
+    <string name="txt_registro">Registro</string>
+    <string name="txt_analisis">Analisis</string>
+
+    <string name="txt_nombre_app_2puntos">Nombre app:</string>
+    <string name="txt_uso_memoria_2puntos">Uso de memoria:</string>
+    <string name="txt_mb">Mb</string>
+    <string name="txt_recurso_cpu_2puntos">Recurso de CPU:</string>
+    <string name="txt_es_esencial_2puntos">Esencial para el sistema:</string>
+    <string name="txt_btn_registrar">Registrar</string>
 </resources>
