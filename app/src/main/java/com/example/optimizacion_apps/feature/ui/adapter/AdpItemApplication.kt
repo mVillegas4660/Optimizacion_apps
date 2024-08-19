@@ -1,21 +1,29 @@
 package com.example.optimizacion_apps.feature.ui.adapter
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.optimizacion_apps.R
+import com.example.optimizacion_apps.databinding.ItemAdpApplicationBinding
+import com.example.optimizacion_apps.domain.model.ApplicationModel
 
-class AdpItemApplication : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.item_adp_application)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+class AdpItemApplication (private val applicationsList: List<ApplicationModel> ): RecyclerView.Adapter<AdpItemApplication.ListApplicationViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListApplicationViewHolder {
+        val binding = ItemAdpApplicationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ListApplicationViewHolder(binding)
+    }
+
+    override fun getItemCount(): Int = applicationsList.size
+
+    override fun onBindViewHolder(holder: ListApplicationViewHolder, position: Int) {
+        val item = applicationsList[position]
+        holder.render(item)
+    }
+
+    class ListApplicationViewHolder(private val binding: ItemAdpApplicationBinding): RecyclerView.ViewHolder(binding.root){
+        fun render( application: ApplicationModel) {
+            binding.tvTitle.text = application.STR_NAME
         }
     }
 }

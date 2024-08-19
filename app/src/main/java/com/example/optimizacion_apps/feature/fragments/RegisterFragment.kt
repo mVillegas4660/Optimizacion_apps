@@ -29,10 +29,10 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initevents()
-        initObservers(view)
+        initObservers()
     }
 
-    private fun initObservers(view: View) {
+    private fun initObservers() {
         viewModel.isRegister.observe(viewLifecycleOwner, Observer {
             it.let {
                 if(it){

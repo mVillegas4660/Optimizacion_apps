@@ -8,7 +8,7 @@ import com.example.optimizacion_apps.database.entity.ApplicationEntity
 
 @Dao
 interface ApplicationDao {
-    @Query("select * from TB_APPLICATION")
+    @Query("select * from TB_APPLICATION order by STR_NAME")
     suspend fun getAll(): List<ApplicationEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

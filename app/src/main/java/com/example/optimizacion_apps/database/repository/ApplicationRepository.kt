@@ -2,14 +2,16 @@ package com.example.optimizacion_apps.database.repository
 
 import com.example.optimizacion_apps.database.dao.ApplicationDao
 import com.example.optimizacion_apps.database.entity.ApplicationEntity
+import com.example.optimizacion_apps.domain.model.ApplicationModel
+import com.example.optimizacion_apps.domain.model.toDomain
 import javax.inject.Inject
 
 class ApplicationRepository @Inject constructor(
     private val applicationDao: ApplicationDao
 ){
-    suspend fun listApplicationsActividadFromDatabase  (
-    ) : List<ApplicationEntity>{
-        return applicationDao.getAll()
+    suspend fun listAllApplicationsActividadFromDatabase(): List<ApplicationModel> {
+        val list: List<ApplicationEntity> = applicationDao.getAll()
+        return list.map { it.toDomain() }
     }
 
     suspend fun insertApplicationActividadFromDatabase (
