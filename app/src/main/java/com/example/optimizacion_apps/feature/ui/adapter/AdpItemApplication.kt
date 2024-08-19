@@ -70,10 +70,8 @@ class AdpItemApplication (private val applicationsList: List<ApplicationModel> )
         }
 
         private fun analizarIsEsencial( isImportant: Boolean ) {
-            if( isImportant ){
+            if( !isImportant ){
                 intOptimizacionIsEsencial = 1
-            }else{
-                intOptimizacionIsEsencial = 2
             }
         }
 
