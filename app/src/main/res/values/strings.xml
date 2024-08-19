@@ -12,4 +12,6 @@
     <string name="txt_recurso_cpu_2puntos">Recurso de CPU:</string>
     <string name="txt_es_esencial">Esencial para el sistema</string>
     <string name="txt_btn_registrar">Registrar</string>
+
+    <string name="txt_cerrar_app">Se recomienda cerrar el app</string>
 </resources>

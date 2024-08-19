@@ -127,6 +127,7 @@
                     android:maxLength="30"
                     android:ems="10"
                     android:textAllCaps="true"
+                    android:hint="Estandar: 40"
                     />
 
             </LinearLayout>
@@ -169,6 +170,7 @@
                     android:maxLength="30"
                     android:ems="10"
                     android:textAllCaps="true"
+                    android:hint="Estandar: 150"
                     />
 
             </LinearLayout>

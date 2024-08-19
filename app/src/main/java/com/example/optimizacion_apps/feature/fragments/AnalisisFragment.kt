@@ -58,7 +58,7 @@ class AnalisisFragment : Fragment() {
     }
 
     private fun initObservers(){
-        viewModel.list.observe(this, Observer { list->
+        viewModel.list.observe(viewLifecycleOwner, Observer { list->
             listApplications = list
             if(list.isNotEmpty()){
                 loadApplications()
